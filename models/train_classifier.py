@@ -75,7 +75,7 @@ def build_model():
 
 
     Returns:
-        pipeline
+        cv
 
     """
     pipeline = Pipeline([
@@ -84,8 +84,14 @@ def build_model():
         ('clf', MultiOutputClassifier(RandomForestClassifier()))
         ])
 
+    parameters  = {
+    'vect__max_df': (2.0,3.0),
+    'vect__ngram_range': ((1, 1),(1, 2)),
+     
+    }
+    cv = GridSearchCV(pipeline, param_grid=parameters)
 
-    return pipeline
+    return cv
 
 def evaluate_model(model, X_test, Y_test, category_names):
     """Function to evaluate the machine learning pipeline.

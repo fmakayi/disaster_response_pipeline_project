@@ -30,3 +30,9 @@ Display visualization in a flask web app
     `python run.py`
 
 3. Go to http://0.0.0.0:3001/
+
+### Licensing, Authors, Acknowledgements
+
+Must give credit to FigureEight for the data set.
+
+The link to the repository can be found [here](https://github.com/fmakayi/disaster_response_pipeline_project.git)
